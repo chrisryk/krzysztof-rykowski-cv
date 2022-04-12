@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(img/background_big.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+header,
+nav,
+footer {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    color: white;
+}
+
+/* header */
+
+h1.title {
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px black;
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+/* navigation */
+h1 span {
+    font-size: 3.8rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    height: 3.5rem;
+    padding: 0 10%;
+    list-style: none;
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+nav li {
+    margin: 4px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 100;
+    transition: letter-spacing 0.3s ease-out, font-size 0.3s ease-out;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid white;
+    margin-right: 100%;
+    transition: 0.4s ease-out;
+}
+
+nav li:hover a::after {
+    margin-right: 0;
+}
+
+nav li:hover a {
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+/* main content */
+main {
+    max-width: 1024px;
+    margin: 20px auto;
+}
+
+main>section {
+    padding: 20px;
+    margin: 0 20px 30px 20px;
+    border-radius: 2px;
+    transform: skewX(-1deg);
+    background-color: rgba(50, 50, 50, 0.8);
+    box-shadow: 5px 10px rgba(138, 0, 0, 0.6);
+    text-shadow: 0 0 3px black;
+    font-size: 1.5rem;
+}
+
+main .subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+#summary,
+#languages {
+    float: left;
+    width: 45%;
+}
+
+#contacts,
+#hobby {
+    float: right;
+    width: 45%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* section summary */
+
+#summary p {
+    margin: 5px;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+/* section contacts */
+.contacts {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.contact {
+    padding: 5px 0;
+}
+
+.contact img {
+    max-height: 30px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.contact a:hover {
+    animation: shake 0.6s infinite;
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0;
+    }
+
+    10% {
+        margin-left: -10px;
+    }
+
+    30% {
+        margin-left: 10px;
+    }
+
+    40% {
+        margin-left: 0;
+    }
+}
+
+/* section skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills figure {
+    flex-basis: 25%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.skills figcaption {
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.skills figure:hover figcaption {
+    opacity: 1;
+}
+
+.skills img {
+    max-height: 100px;
+    transition: 0.5s;
+}
+
+.skills figure:hover img {
+    transform: scale(0.8);
+}
+
+/* section education */
+/* section experience */
+.education,
+.experience {
+    padding: 5px;
+}
+
+.education {
+    position: relative;
+    min-height: 120px;
+}
+
+.education img {
+    position: absolute;
+    top: 50%;
+    right: 60%;
+    transform: translate(-5%, -50%);
+    max-height: 80px;
+}
+
+.education div {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translateY(10%);
+}
+
+.education span,
+.education h4,
+.education h3,
+.experience span,
+.experience h4,
+.experience h3 {
+    display: block;
+    padding: 2px;
+    text-align: left;
+}
+
+
+/* section languages */
+#languages div {
+    padding: 5px;
+    text-align: center;
+}
+
+#languages h3 {
+    display: inline-block;
+    padding: 0;
+}
+
+/* section hobby */
+#hobby p {
+    margin: 5px;
+    font-size: 1.8rem;
+}
+
+/* footer */
+footer h3 {
+    background-color: rgba(50, 50, 50, 0.8);
+    text-align: right;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    /* nav */
+    nav ul {
+        flex-wrap: wrap;
+        min-height: 10rem;
+    }
+
+    nav li {
+        flex-basis: 20%;
+    }
+
+    nav a {
+        font-weight: 300;
+        text-align: center;
+        transition: none;
+    }
+
+    nav a::after {
+        content: none;
+    }
+
+    nav li:hover a {
+        letter-spacing: 0;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    /* content */
+
+    #summary,
+    #languages,
+    #contacts,
+    #hobby {
+        float: none;
+        width: auto;
+    }
+
+    .contacts {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        flex-grow: 1;
+    }
+
+    .contact img {
+        margin-left: 20px;
+    }
+
+    .contact a:hover {
+        animation: none;
+    }
+
+    .skills figcaption {
+        opacity: 1;
+    }
+
+    #hobby p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills img {
+        max-height: 80px;
+    }
+
+    .education img {
+        max-height: 70px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav ul {
+        min-height: 30rem;
+    }
+    
+    nav li {
+        flex-direction: column;
+        flex-basis: 100%;
+        margin: 5px;
+    }
+    
+    nav a {
+        border-bottom: 1px solid white;
+    }
+    
+    .education img {
+        display: none;
+    }
+
+    .education div {
+        top: 0;
+        left: 0;
+    }
+
+    .skills img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills figure {
+        flex-basis: 50%;
+    }
+}
