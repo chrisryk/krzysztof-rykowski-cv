@@ -39,24 +39,45 @@ a {
     color: white;
 }
 
+section {
+    opacity: 0;
+    transition: 1s;
+}
+
+section.scrolled {
+    opacity: 1;
+}
+
 /* header */
+header div {
+    background-color: rgba(50, 50, 50, 0.2);
+    text-align: center;
+}
 
 h1.title {
-    padding: 10px;
-    font-size: 3rem;
+    padding: 5px;
+    font-size: 3.5rem;
     font-weight: 500;
     text-transform: uppercase;
     font-style: italic;
+    font-weight: bold;
     letter-spacing: 2px;
+    color: black;
     text-shadow: 0 0 15px black;
-    background-color: rgba(50, 50, 50, 0.8);
+}
+
+header img {
+    max-height: 15rem;
+    margin: 5px;
+    box-shadow: 0 0 15px black;
+    border-radius: 50%;
+}
+
+h1 span {
+    font-size: 4rem;
 }
 
 /* navigation */
-h1 span {
-    font-size: 3.8rem;
-}
-
 nav ul {
     display: flex;
     justify-content: space-around;
