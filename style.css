@@ -82,7 +82,7 @@ nav ul {
     justify-content: space-around;
     flex-grow: 1;
     height: 3.5rem;
-    padding: 0 10%;
+    padding: 0 20%;
     list-style: none;
     background-color: rgba(50, 50, 50, 0.9);
 }
@@ -326,6 +326,11 @@ main .subtitle {
 footer h3 {
     background-color: rgba(50, 50, 50, 0.8);
     text-align: right;
+}
+
+@media (max-width: 1600px) {
+    nav ul {
+        padding: 0 10%;
 }
 
 @media (max-width: 1024px) {
