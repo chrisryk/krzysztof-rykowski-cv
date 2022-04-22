@@ -23,9 +23,8 @@ body {
 }
 
 header,
-nav,
-footer {
-    max-width: 1280px;
+footer,
+nav {
     margin: 0 auto;
 }
 
@@ -277,6 +276,34 @@ main .subtitle {
     text-align: left;
 }
 
+.arrow {
+    position: fixed;
+    bottom: 4rem;
+    right: -7rem;
+    transition: 0.7s;
+}
+
+.arrow a {
+    display: block;
+    padding: 2px;
+    border-radius: 50% 0 0 50%;
+    background-color:rgba(138, 0, 0, 0.6);
+}
+
+.arrow img {
+    display: block;
+    height: 40px;
+    padding: 3px;
+    transition: 0.7s;
+}
+
+.active {
+    right: 0;
+}
+
+.roll {
+    transform: rotate(-810deg);
+}
 
 /* section languages */
 #languages div {
